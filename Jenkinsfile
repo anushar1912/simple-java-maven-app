@@ -2,11 +2,12 @@ pipeline {
     agent any
     
     environment {
-        APP_NAME = 'my-application'
-        VERSION = "${BUILD_NUMBER}"
-        ARTIFACT_NAME = "*.jar"
-        SONAR_PROJECT_KEY = 'my-app-key'
-    }
+    APP_NAME = 'my-application'
+    VERSION = "${BUILD_NUMBER}"
+    ARTIFACT_NAME = "${APP_NAME}-${VERSION}.jar"
+    SONAR_PROJECT_KEY = 'my-app-key'
+}
+
     
     tools {
         maven 'Maven'
@@ -149,6 +150,7 @@ pipeline {
         }
     }
 }
+
 
 
 
