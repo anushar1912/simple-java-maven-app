@@ -17,7 +17,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 echo '========== Stage 1: Checking out code from Git =========='
-                git branch: 'main',
+                git branch: 'master',
                     credentialsId: 'git-credentials',
                     url: 'https://github.com/anushar1912/jenkines-test'
             }
@@ -79,4 +79,5 @@ pipeline {
         }
     }
 }
+
 
