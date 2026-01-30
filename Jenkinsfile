@@ -19,7 +19,7 @@ pipeline {
                 echo '========== Stage 1: Checking out code from Git =========='
                 git branch: 'master',
                     credentialsId: 'git-credentials',
-                    url: 'https://https://github.com/THOTASRIHARI506/simple-java-maven-app'
+                    url: 'https://github.com/THOTASRIHARI506/simple-java-maven-app'
             }
         }
         
@@ -79,6 +79,7 @@ pipeline {
         }
     }
 }
+
 
 
 
